@@ -1,212 +1,330 @@
 <!DOCTYPE html>
-<html>
+
+<html class = "no-js" lang = "en">
 
 <head>
+    
+    <!--- basic page needs
+    =========================== -->
     <meta charset = "utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content>
-    <meta name="author" content>
-    <title>Home | Justin Clancy </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <style data-emotion="css"></style>
+    <title>Home | Justin Clancy</title>
+    <meta name = "description" content = "Hey! I'm Justin Clancy, a PhD candidate at the University of Melbourne, Australia, studying Cosmology under the supervision of Christian Reichardt. I explore polarization in pre-stellar gas clouds and hunt for (sub-)mm transient events in the time domain.">
+    <meta name = "author" content = "Justin Clancy">
+    <meta name = "keywords" content = "Justin, Clancy, Justin Clancy, Justin Clancy cosmology, Justin Clancy Galaxy, Justin Clancy Simons Observatory, Justin Clancy CMB, Justin Clancy University of Melbourne Justin Clancy Melbourne, Justin Clancy transients, Justin Clancy unimelb, CMB, transients, cold clumps, Univeristy of Melbourne, unimelb, Melbourne">
+    
+    <!--- Mobile specific metas
+    =========================== -->
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/academicons.min.css"/>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="web_icon.ico" type="image/x-icon">
+    <link rel="icon" href="web_icon.ico" type="image/x-icon">
 
 </head>
+    
+<body id="top">
 
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
 
-<!------------------------------------------------------------------------->
-
-<body>
-    <header class="navbar navbar-inverse navbar-fixed-top black" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="Figures/headshotcrop.jpg" width="50" height="50" alt="logo">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="collabs.html">Collaborations</a>
-                    </li>
-                    <li>
-                        <a href="resume.html">Resume/CV</a>
-                    </li>
-                </ul>
-            </div>
+    	<!---
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
         </div>
-    </header>
+        --->
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About Me</a></li>
+                <li><a class="smoothscroll"  href="#research" title="research">Research</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
     
-<!------------------------------------------------------------------------->
+     <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/transient.png" data-natural-width=1500 data-natural-height=1000 data-position-y=center>
     
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide black">
-            <div class="carousel-inner">
-                <div class="item active" style="background-image: url(Figures/spacebackdrop.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered">
-                                    <h2 class="animation animated-item-1" style="color:White;">Justin Clancy </h2>
-                                    <p class="animation animated-item-2" style="color:White;">PhD Candidate - University of Melbourne </p>
-                                    <h3 class="animation animated-item-3" style="color:White;">Welcome </h3>
-                                </div>
-                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="justin-clancy" data-version="v1">
-                                    <a class="badge-base__link LI-simple-link" href="https://au.linkedin.com/in/justin-clancy?trk=profile-badge">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Hey!</h3>
+
+                <h1>
+                    I am Justin Clancy. <br>
+                    I'm a PhD Candidate at UniMelb<br>
+                    searching for transients <br>
+                    with Simons Observatory.
+                </h1>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="smoothscroll scroll-link">
+                        <span>Scroll Down</span>
+                    </a>
                 </div>
+
             </div>
-        </div>
-    </section>
+
+        </div> <!-- end home-content -->
+       
+       <ul class = "home-social">
+           <li>
+               <a href = "mailto:clancyj1@student.unimelb.edu.au"><i class = "im im-mail" aria-hidden = "true"></i>
+               </a>
+           </li>
+           <li>
+               <a href = "https://arxiv.org/find/astro-ph/1/au:+Clancy_J/0/1/0/all/0/1"><i class = "ai ai-arxiv" aria-hidden = "true"></i>
+               </a>
+           </li>
+           <li>
+               <a href = "http://orcid.org/0000-0002-9711-9969"><i class = "ai ai-orcid" aria-hidden = "true"></i>
+               </a>
+           </li>
+            <li>
+                <a href="https://github.com/justinc97"><i class="im im-github" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/justin-clancy"><i class="im im-linkedin" aria-hidden="true"></i></a>
+            </li>      
+       </ul>
+       <!-- end home-social -->
+       
+    </section> 
+    <!-- end s-home -->
     
-<!------------------------------------------------------------------------->
-    
-    <section id="recent-works">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2>Latest Submission</h2>
-                    <ul>
-                        <li> <a href="https://arxiv.org/"><b>Polarisation of Galactic Cold Clumps</b></a></li>
-                    </ul>
-                    <h3>My Current Projects</h3>
-                    <ul>
-                        <li>Polarisation of Galacic Cold Clumps</li>
-                        <li>Galactic dust foreground modelling</li>
-                        <li>(sub)mm-wave transient search and modelling</li>
-                    </ul>
-                </div>
-                <div class="col-md-9">
-                    <div id="scroller" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="item_active">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="Figures/webSPoCC.png" alt="">
-                                                <h5>
-                                                    SPoCC
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Simulate Polarised Cold Clumps for PySM3" href="https://github.com/justinc97/SO_Galactic_Cold_Clumps"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="Figures/beamwebsite.jpg" alt="">
-                                                <h5>
-                                                    SO LAT Beam Functions
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger"title="Simons Observatory Large Aperture Telescope Beam Forecasts" href="https://github.com/justinc97/SO_beams"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- About
+    ==================================================== -->
+    <section id = "about" class = "s-about page-about target-secion">
+        <div class = "row about-content">
+            <div class = "col-six tab-full left">
+                <h3>About Me</h3>
 
-    <!------------------------------------------------------------------------->
-
-    <section id="bottom" class="wet-asphalt">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-md-6">
-                    <h4>Research Interests</h4>
-                    <p> 
-                        <br>
-                        "Observational cosmology, "
-                        <br>
-                        "Astronomical Instrumentation, "
-                        <br> "Extragalactic Astronomy, "
-                        <br>
-                        <b>Galactic Science,</b>
-                        <br>
-                        "Time-Domain Astronomy, "
-                        <br>
-                        "Microwave Transient Searches."
-                    </p>
-                </div><!--/.col-md-3-->
-
-                <p align="right">
-                    <a class="btn btn-social btn-facebook" href="https://www.facebook.com/justin.clancy.92">
-                        <i class="icon-facebook">
-                        </i>
-                    </a>
-                    <a class="btn btn-social btn-linkedin" href="www.linkedin.com/in/justin-clancy">
-                        <i class="icon-linkedin">
-                        </i>
-                    </a>
-                    <br>
-                    <a class="btn btn-social btn-github" href="https://github.com/justinc97">
-                        <i class="icon-github">
-                        </i>
-                    </a>
-                    <a class="btn btn-social btn-twitter" href="https://twitter.com/justinclancy_">
-                        <i class="icon-twitter">
-                        </i>
-                    </a>
-                    <br>
+                <p>
+                    I'm a PhD candidate at the University of Melbourne, Australia currently studying under the supervision of Christian Reichardt. I work as a member of the Simons Observatory collaboration with research focussing on (sub-)mm sources and transients.
                 </p>
-                <div class="pull-right">
-                    <address>
-                        <strong>Justin Clancy</strong>
-                        <br>
-                        <a href="mailto:justinpclancy@gmail.com">justinpclancy@gmail.com</a>
-                        <br>
-                        "Office 365 David Caro Building"
-                        <br>
-                        "University of Melbourne,"
-                        <br>
-                        "Parkville, VIC"
-                        <br>
-                    </address>
+
+                <p>
+                    I completed my BSc in Physics at the University of Melbourne in 2018 before taking a year off to travel the Americas where I spent just over a month at Cerro-Tololo Inter-American Observatory in La Serena, Chile assisting in the writing of a paper dedicated to galaxy cluster collisions. After returning home I went on to obtain my MSc also from the University of Melbourne in 2020.
+                </p>
+
+                <p>
+                    Outside of astronomy and astrophysics I have had a long appreciation for film and screen, completing a three year stream of film making courses within my BSc. Complementary to this I worked at Hoyts cinemas between 2013 and 2021 where I built my experience in frontline customer experience, supervision and into management with roles including social media management, staff hiring and training and financial management. 
+                </p>
+
+                <h3>Contact Information</h3>
+
+                <p>
+                    Justin Clancy<br>
+                    Office 365 David Caro Building<br>
+                    School of Physics<br>
+                    Univeristy of Melbourne<br>
+                    Parkville, VIC 3010<br>
+                    Australia<br>
+                    <a href="mailto:clancyj1@student.unimelb.edu.au">clancyj1@student.unimelb.edu.au</a>
+                    <a href="mailto:justinpclancy@gmail.com">justinpclancy@gmail.com</a>
+                </p>
+
+                <a href="Justin_Clancy_CV.pdf" class = "btn btn--primary full-width" background-color = "#000000"> Download CV </a>
+            </div>
+            <div class = "col-six tab-full right">
+                <img src = "images/headshotcrop.jpg">
+            </div>
+        </div>
+        
+        
+        
+    </section>
+    
+    
+    <!-- Research
+    ======================================== -->
+    <section id = "research" class = "s-blog target-section">
+        
+        <div class = "row narrow section-intro has-bottom-sep">
+            <div class = "col-full">
+                <h1>Research Interests</h1>
+                <p>
+                    I have covered a broad region of cosmology and associated areas throughout my work with the Simons Observatory collaboration. Beginning with beam calibration in my MSc, my PhD has been focussed firstly on Galactic Science and now I have moved into time domain science with the discovery and analysis of transients in the (sub-)mm. I enjoy exploring the intersections of observational cosmology with high-energy, time-domain astrophysics. <br>
+                    Below are some research highlights, you can find a full list of publications <a href = "https://arxiv.org/find/astro-ph/1/au:+Clancy_J/0/1/0/all/0/1">here</a>.
+                </p>
+            </div>
+        </div>
+        
+        <div class = "row blog-content">
+            <div class = "col-full">
+                
+                <div class = "blog-list block-1-2 block-tab-full">
+                    
+                    <article class = "col-block">
+                        
+                        <div class = "blog-date">
+                            2023
+                        </div>
+                        
+                        <h2 class = "h01">Polarization Fraction of PGCCs</h2>
+                        <p>
+                            In this work we perform a stacking analysis of Planck Galactic cold clumps. We were able to measure, for the first time, the mean-squared and RMS polarization fraction of Galactic cold clumps. Tests were also performed on the relationship between this polarization contribution across the Galactic dust to cold clump properties such a their flux density, luminosity and Galactic distribution where we found no strong evidence of these affecting the polarization and hence likely the magnetic fields of these objects. We also performed a forecast for observing Galactic cold clumps in intensity and polarization with the Simons Observatory.
+                        </p>
+                        <div class = "blog-cat">
+                            <a
+                               href="https://arxiv.org/abs/2303.02788"> Publication</a>
+                            <a
+                               href="https://github.com/justinc97/PGCC_Mask_Generation">PGCC Mask Generation
+                            </a>
+                        </div>
+                        
+                    </article>
+                    
+                    <article class = "col-block">
+                        
+                        <div class = "blog-date">
+                            2023
+                        </div>
+                        
+                        <h2 class = "h01">[Depreciated Software] SO LAT Primitive Beams</h2>
+                        <p>
+                            The Simons Observatory in it's early stages of LAT development required extensive analysis of the beam functions for future calibration efforts. For my MSc project, I explored measuring the beam function, approximating a circular Gaussian beam, by scanning point sources. Furthermore I performed a Fisher forecast on the beam function covariance to see how point source calibration would impact cosmological parameters. See below for the basic functions and use examples.
+                        </p>
+                        <div class = "blog-cat">
+                            <a
+                               href="https://github.com/justinc97/SO_beams">Github Repository
+                            </a>
+                        </div>
+                        
+                    </article>
                 </div>
             </div>
         </div>
-    </section><!--/#bottom-->             
+    </section>
+        
+    <!-- footer
+    ================================================== -->
     
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a id="gototop" class="gototop" href="#"><i class="icon-chevron-up"></i></a></li>
-                    </ul>
-                </div>
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <ul class="footer-social">
+                    <li><a href="mailto:clancyj1@student.unimelb.edu.au">
+                        <i class="im im-mail" aria-hidden="true"></i>
+                        <span>email</span>
+                    </a></li>
+                    <li><a href="https://arxiv.org/find/astro-ph/1/au:+Clancy_J/0/1/0/all/0/1">
+                        <i class="ai ai-arxiv" aria-hidden="true"></i>
+                        <span>arxiv</span>
+                    </a></li>
+                    <li><a href="http://orcid.org/0000-0002-9711-9969">
+                        <i class="ai ai-orcid" aria-hidden="true"></i>
+                        <span>orcid</span>
+                    </a></li>
+                    <li><a href="https://github.com/justinc97">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>github</span>
+                    </a></li>
+                    <li><a href="https://www.linkedin.com/in/justin-clancy/">
+                        <i class="im im-linkedin" aria-hidden="true"></i>
+                        <span>linkedin</span>
+                    </a></li>
+                </ul>
+                    
             </div>
         </div>
-    </footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+
+                <p>I acknowedge and pay my respects to the Traditional Owners of the land on which I live and work.</p>
+
+                <div class="copyright">
+                    <span>Landing Illustration Credit: Robin Dienel, courtesy of the Carnegie Institution for Science
+
+</span> 
+                    <span>Last Updated June 2023</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
     
-    </body>
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
