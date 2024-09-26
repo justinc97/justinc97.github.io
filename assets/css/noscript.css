@@ -6,6 +6,22 @@
 
 /* Banner */
 
+body.is-preload #banner:after {
+	opacity: 0.85;
+}
+
+body.is-preload #banner > .inner {
+	-moz-filter: none;
+	-webkit-filter: none;
+	-ms-filter: none;
+	filter: none;
+	-moz-transform: none;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+	opacity: 1;
+}
+/* 
 	body.is-preload #banner .logo {
 		-moz-transform: none;
 		-webkit-transform: none;
@@ -36,4 +52,4 @@
 		-webkit-filter: none;
 		-ms-filter: none;
 		filter: none;
-	}
+	} */
