@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Justin Clancy - Data Scientist</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			* { 
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+				line-height: 1.6;
+				color: #333;
+				background: #f8f9fa;
+			}
+
+			/* Header */
+			header {
+				background: linear-gradient(135deg, #1a1a2e 0%, #2e4232 100%);
+				color: white;
+				padding: 1rem 0;
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 1000;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			nav {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 2rem;
+			}
+
+			.logo {
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #e15e00;
+				text-decoration: none;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2rem;
+				list-style: none;
+			}
+
+			.nav-links a {
+				color: white;
+				text-decoration: none;
+				font-weight: 500;
+				transition: color 0.3s;
+			}
+
+			.nav-links a:hover {
+				color: #e15e00;
+			}
+
+			/* Hero Section */
+			.hero {
+				margin-top: 70px;
+				background: linear-gradient(135deg, #2e4232 0%, #1a1a2e 100%);
+				color: white;
+				padding: 6rem 2rem 4rem;
+				text-align: center;
+			}
+
+			.hero-content {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			.hero h1 {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+				color: white;
+			}
+
+			.hero .subtitle {
+				font-size: 1.5rem;
+				color: #e15e00;
+				margin-bottom: 1rem;
+				font-weight: 600;
+			}
+
+			.hero p {
+				font-size: 1.1rem;
+				margin-bottom: 2rem;
+				line-height: 1.8;
+			}
+
+			.cta-buttons {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				padding: 0.8rem 2rem;
+				text-decoration: none;
+				border-radius: 5px;
+				font-weight: 600;
+				transition: all 0.3s;
+				display: inline-block;
+			}
+
+			.btn-primary {
+				background: #e15e00;
+				color: white;
+			}
+
+			.btn-primary:hover {
+				background: #c75000;
+				transform: translateY(-2px);
+			}
+
+			.btn-secondary {
+				background: transparent;
+				color: white;
+				border: 2px solid white;
+			}
+
+			.btn-secondary:hover {
+				background: white;
+				color: #2e4232;
+			}
+
+			/* Skills Section */
+			.skills-section {
+				background: white;
+				padding: 4rem 2rem;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.section-title {
+				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+				color: #1a1a2e;
+			}
+
+			.section-subtitle {
+				text-align: center;
+				color: #666;
+				margin-bottom: 3rem;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+
+			.skill-card {
+				background: #f8f9fa;
+				padding: 1.5rem;
+				border-radius: 10px;
+				border-left: 4px solid #e15e00;
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+
+			.skill-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			}
+
+			.skill-card h3 {
+				color: #2e4232;
+				margin-bottom: 1rem;
+				font-size: 1.2rem;
+			}
+
+			.skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.tag {
+				background: #e15e00;
+				color: white;
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.9rem;
+			}
+
+			/* Projects Section */
+			.projects-section {
+				background: #f8f9fa;
+				padding: 4rem 2rem;
+			}
+
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+
+			.project-card {
+				background: white;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+
+			.project-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+			}
+
+			.project-image {
+				width: 100%;
+				height: 200px;
+				background: linear-gradient(135deg, #2e4232 0%, #1a1a2e 100%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-size: 3rem;
+			}
+
+			.project-content {
+				padding: 1.5rem;
+			}
+
+			.project-content h3 {
+				color: #1a1a2e;
+				margin-bottom: 0.5rem;
+			}
+
+			.project-tech {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin: 1rem 0;
+			}
+
+			.tech-tag {
+				background: #e8f4f8;
+				color: #2e4232;
+				padding: 0.2rem 0.6rem;
+				border-radius: 15px;
+				font-size: 0.85rem;
+			}
+
+			.project-links {
+				display: flex;
+				gap: 1rem;
+				margin-top: 1rem;
+			}
+
+			.project-link {
+				color: #e15e00;
+				text-decoration: none;
+				font-weight: 600;
+				transition: color 0.3s;
+			}
+
+			.project-link:hover {
+				color: #c75000;
+			}
+
+			/* About Section */
+			.about-section {
+				background: white;
+				padding: 4rem 2rem;
+			}
+
+			.about-content {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				gap: 3rem;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.about-image {
+				width: 100%;
+				border-radius: 10px;
+				box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			}
+
+			.about-text h2 {
+				color: #1a1a2e;
+				margin-bottom: 1rem;
+			}
+
+			.about-text p {
+				margin-bottom: 1rem;
+				color: #555;
+			}
+
+			/* Contact Section */
+			.contact-section {
+				background: #2e4232;
+				color: white;
+				padding: 4rem 2rem;
+			}
+
+			.contact-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 3rem;
+				max-width: 1200px;
+				margin: 2rem auto 0;
+			}
+
+			.contact-info h3 {
+				color: #e15e00;
+				margin-bottom: 1rem;
+			}
+
+			.contact-item {
+				margin-bottom: 1rem;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.contact-item a {
+				color: white;
+				text-decoration: none;
+			}
+
+			.contact-item a:hover {
+				color: #e15e00;
+			}
+
+			/* Footer */
+			footer {
+				background: #1a1a2e;
+				color: white;
+				text-align: center;
+				padding: 2rem;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.hero h1 {
+					font-size: 2rem;
+				}
+
+				.hero .subtitle {
+					font-size: 1.2rem;
+				}
+
+				.about-content {
+					grid-template-columns: 1fr;
+				}
+
+				.contact-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.nav-links {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header>
+			<nav>
+				<a href="index.html" class="logo">JUSTIN CLANCY</a>
+				<ul class="nav-links">
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a>"</li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Hero Section-->
+		 <section class="hero">
+			<div class="hero-content">
+				<h1>Justin Clancy</h1>
+				<p class="subtitle">Data Scientist | Astrophysicist</p>
+				<p>Transforming massive astronomical datasets into actionable insights through advanced statistical modeling, signal processing, machine learning, and scalable data pipelines. PhD candidate specializing in large-scale data analysis and scientific computing.</p>
+				<div class="cta-buttons">
+					<a href="#projects" class="btn btn-secondary">View Projects</a>
+					<a href="#" class="btn btn-primary">Download CV</a>
+					<a href="research_outreach.html" class="btn btn-secondary">Conferences, Awards & More</a>
+				</div>
+			</div>
+		 </section>
+
+		<!-- Skills Section -->
+		<section id="skills" class="skills-section">
+			<div class="container">
+				<h2 class="section-title">Technical Skills</h2>
+				<p class="section-subtitle">Expertise in data science, signal processing, machine learning, and high performance scientific computing</p>
+
+				<div class="skills-grid">
+
+					<div class="skill-card">
+						<h3>Programming & Data Languages</h3>
+						<div class="skill-tags">
+							<span class="tag">Python</span>
+							<span class="tag">Julia</span>
+							<span class="tag">R</span>
+							<span class="tag">SQL</span>
+							<span class="tag">Git</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Machine Learning & Analytics</h3>
+						<div class="skill-tags">
+							<span class="tag">scikit-learn</span>
+							<span class="tag">TensorFlow</span>
+							<span class="tag">PyTorch</span>
+							<span class="tag">PySpark</span>
+							<span class="tag">Pandas</span>
+							<span class="tag">NumPy</span>
+							<span class="tag">SciPy</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Tools & Infrastructure</h3>
+						<div class="skill-tags">
+							<span class="tag">Jupyter</span>
+							<span class="tag">Conda</span>
+							<span class="tag">HPC</span>
+							<span class="tag">Linux/Unix/MacOs</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Statistical Methods</h3>
+						<div class="skill-tags">
+							<span class="tag">Bayesian Inference</span>
+							<span class="tag">Time Series Data</span>
+							<span class="tag">Signal Processing</span>
+							<span class="tag">Monte Carlo</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Core Competencies</h3>
+						<div class="skill-tags">
+							<span class="tag">Pipeline Development</span>
+							<span class="tag">ETL</span>
+							<span class="tag">Data Modeling</span>
+							<span class="tag">Optimization</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="projects-section">
+			<div class="container">
+				<h2 class="section-title">Featured Projects</h2>
+				<p class="section-subtitle">Data-driven solutions and research</p>
+
+				<div class="projects-grid">
+
+					<div class="project-card">
+						<div class="project-image">Rapid Transient Detection</div>
+						<div class="project-content">
+							<h3>Transient Detection Pipeline for the Simons Observatory</h3>
+							<p>Developed automated pipeline processing time-ordered data from the Simons Observatory, achieving 95% detection accuracy for rapid astrophysical transients using custom matched filtering and machine learning algorithms.</p>
+							<div class="project-tech">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">scikit-learn</span>
+								<span class="tech-tag">SOTODLIB</span>
+								<span class="tech-tag">SciPy & NumPy</span>
+							</div>
+							<div class="project-links">
+								<a href="#" class="project-link">View Publication</a>
+								<a href="#" class="project-link">Github</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						<div class="project-image">Galactic Cold Clumps</div>
+						<div class="project-content">
+							<h3>Statistical Analysis of Polarized Galactic Cold Clumps and Mask Generation</h3>
+							<p>Stacking analysis code to measure the polarization fraction of Planck Galactic cold clumps and generate fullsky source masks in HEALPix format for CMB surveys.</p>
+							<div class="project-tech">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">SciPy & Numpy</span>
+								<span class="tech-tag">Healpy & Astropy</span>
+								<span class="tech-tag">Matplotlib</span>
+							</div>
+							<div class="project-links">
+								<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.3712C/abstract" class="project-link">View Publication</a>
+								<a href="https://github.com/justinc97/PGCC_Mask_Generation" class="project-link">Github</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card">
+						<div class="project-image">Stock ETL</div>
+						<div class="project-content">
+							<h3>Stock ETL Pipeline</h3>
+							<p>A self-organised project with a comprehensive demonstration of common data engineering practices through the use of Python, Apache, SQL, and Flask. This project implements a complete ETL pipeline for stock market data.</p>
+							<div class="project-tech">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">Apache Spark / PySpark</span>
+								<span class="tech-tag">SQL</span>
+								<span class="tech-tag">Apache Airflow</span>
+								<span class="tech-tag">Flask</span>
+							</div>
+							<div class="project-links">
+
+								<a href="https://github.com/justinc97/Stock_ETL_Pipeline" class="project-link">Github</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="about-section">
+			<div class="about-content">
+				<div>
+					<img src="images/circle_headshot.png" alt="Justin Clancy" class="about-image">
+				</div>
+				<div class="about-text">
+					<h2>About Me</h2>
+					<p>I'm a data scientist and PhD candidate at The University of Melbourne, specializing in analysing large-scale datasets from astrophysical instruments. My research with the Simons Observatory has given me extensive experience in statistical modeling, signal processing, machine learning, and building production-ready data pipelines.</p>
+					<p>I'm driven by diving into messy, real-world data and turning it into clear, insightful outputs. Whether it's developing algorithms to detect rare, rapid astrophysical transient events, or building systems to run statistical analysis of large data catalogues, I thrive on solving challenging data problems.</p>
+					<p>Beyond technical skills, I'm passionate about communicating my findings to diverse audiences -- from academic presentations to public outreach events. I believe great data science should combine technical rigor with the ability to tell compelling stories from the data.</p>
+					<p><strong style="color: rgb(132, 132, 132);">When I'm not coding or exploring the Universe:</strong> You can find me exploring the corners of world and deep into Australia's outback, stargazing (naturally!), or sharing the wonders of science with the next generation.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Information -->
+		<section id="contact" class="contact-section">
+			<div class="container">
+				<h2 class="section-title" style="color: white;">Let's Connect</h2>
+				<p class="section-subtitle" style="color: #ccc;">Open to data science/analysis opportunities and collaborations</p>
+
+				<div class="contact-grid">
+					<div class="contact-info">
+						<h3>Get In Touch</h3>
+						<div class="contact-item">
+							<a class="icon solid fa-envelope"></a><a href="mailto:justinpclancy@gmail.com">justinpclancy@gmail.com</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon brands fa-linkedin"></a><a href="https://www.linkedin.com/in/justin-clancy/">linkedin.com/in/justin-clancy</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon brands fa-github"></a><a href="https://github.com/justinc97">github.com/justinc97</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon brands fa-instagram"></a><a href="instagram.com/justinclancy_">instagram.com/justinclancy_</a>
+						</div>
+					</div>
+
+					<div>
+						<h3 style="color: #e15e00;">Quick Links</h3>
+						<div class="contact-item">
+							<a class="icon solid fa-file"></a><a href="#">Download Full CV</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon solid fa-book"></a>
+							<a href="https://ui.adsabs.harvard.edu/public-libraries/IGegxWcrQDO4VB3JX6Rk0A">Publication List</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon brands fa-orcid"></a>
+							<a href="https://orcid.org/0000-0002-9711-9969">ORCID: 0000-0002-9711-9969</a>
+						</div>
+						<div class="contact-item">
+							<a class="icon solid fa-comment"></a>
+							<a href="research_outreach.html">Talks, Posters, Teaching and Awards</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer>
+			<p>&copy; 2025 Justin Clancy. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Built with a passion for data and discovery.</p>
+		</footer>
+	</body>
+</html>
